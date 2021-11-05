@@ -1,0 +1,338 @@
+/* BUTTON STYLING */
+sl-button.topbtn::part(base) {
+  /* Set design tokens for height and border width */
+  --sl-input-height-medium: 40px;
+  
+  background-color: antiquewhite;
+  color: #144939;
+  font-size: 1rem;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  float: right;
+  max-width: 120px;
+  border: none;
+}
+
+sl-button.topbtn::part(base):hover {
+  background-color: #5e9467;
+  color: #144939;
+}
+
+sl-button.topbtn::part(base):visited {
+  background-color: antiquewhite;
+  color: #672e1e;
+}
+
+/* NAVIGATION STYLING */
+.navbar {
+    width: 100%;
+    overflow: auto;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    opacity: 0.9;
+  }
+  
+  /* LINKS */
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: #195840;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    width: 17%; 
+    text-align: center; 
+  }
+  
+  /* HOVER */
+  .navbar a:hover {
+    color: #672e1e;  
+}
+  
+  /* ACTIVE LINK */
+  .navbar a.active-link {
+    color: #314c75;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left; 
+    }
+  }
+
+/*HOME STYLING*/
+  h1 {
+    font-size: 65px;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .scroll {
+    font-family: 'Permanent Marker';
+    font-size: 25px;
+    left: 50%;
+    top: 83%;
+    position: absolute;
+    color: blanchedalmond;
+    animation: wave 2.25s infinite ease-in-out;
+  } 
+
+  @keyframes wave {
+    50% {
+      transform: translate(0, -15%);
+    }
+  }
+
+  section {
+    height: 100vh;  
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+    height: 300px;
+    background-image: url("images/S1_BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow-x: hidden;
+  }
+  
+  .home {
+    border-radius: 5px;
+    color: #f2f2f2;
+    padding: 10px;
+  }
+
+  .hometext {
+    padding: 10px;
+    top: 40%;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    color: #144939;
+    opacity: 0.9;
+    max-width: 500px;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+  }
+
+  .text1 {
+    text-align: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+
+
+  /* =====ABOUT & THREATS STYLING===== */
+
+#about {
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#threats {
+  background-image: url("images/THREATS_BG.png");
+  background-color: #ecf1ee;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.heading3 {
+  padding-top: 20px;
+  font-size: 50px;
+  color: #144939;
+  font-family: 'Permanent Marker';
+  text-align: center;
+}
+
+.text3 {
+  font-size: 11px;
+  color: #144939;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.flip-card-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  perspective: 1000px; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+
+/* =====IMAGE GALLERY STYLING===== */
+
+#imagegallery {
+  background-image: url(images/S4_BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+}
+
+.heading4 {
+  padding-top: 20px;
+  font-size: 50px;
+  color: #144939;
+  font-family: 'Permanent Marker';
+  text-align: center;
+}
+
+* {box-sizing:border-box}
+
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+/*OVERRIDES DISPLAY NONE*/
+div.firstSlide {
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -20px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.4s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #193828cc;
+}
+
+/* CAPTION */
+.text {
+  color: #f2f2f2;
+  background-color: #144939;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ddf0e5;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.active, .dot:hover {
+  background-color: #144939;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* ===== HELP =====*/
+#help {
+  background-image: url(images/S5_BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow-x: hidden;
+}
+
+.tabgroup {
+  width: 1000px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  color: #09221a;
+}
+
+
+@media screen and (max-width: 600px) {
+  .container, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
